@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "GitGlyph": {
+      "commandName": "Executable",
+      "executablePath": "D:\\D2L\\Projects\\Development\\DevTools\\MiscTools\\bin\\Debug\\HtmlGenerator\\net46\\HtmlGenerator.exe",
+      "commandLineArgs": "/in:C:\\Users\\drose\\AppData\\Local\\Temp\\6b109c34-b545-4b54-be58-56db8a42ccf0\\all_projects.txt"
+    }
+  }
+}

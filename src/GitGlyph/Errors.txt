@@ -1,0 +1,5 @@
+﻿===============================================
+2017-08-30 4:06:14 PM: First chance exception
+System.IO.IOException: The directory is not empty.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)

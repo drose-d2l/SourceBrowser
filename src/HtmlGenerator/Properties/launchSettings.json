@@ -2,7 +2,7 @@
   "profiles": {
     "HtmlGenerator": {
       "commandName": "Project",
-      "commandLineArgs": "..\\..\\TestCode\\TestSolution.sln /out:..\\SourceIndexServer\\index"
+      "commandLineArgs": "/in:C:\\Users\\drose\\AppData\\Local\\Temp\\6b109c34-b545-4b54-be58-56db8a42ccf0\\all_projects.txt"
     }
   }
 }

@@ -10,6 +10,13 @@
     <NuSpecFile>$(MSBuildProjectDirectory)\Microsoft.SourceBrowser.nuspec</NuSpecFile>
     <NuGetVersion>1.0.15</NuGetVersion>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>D:\D2L\Projects\Development\DevTools\MiscTools\bin\Debug\HtmlGenerator</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NET46</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>\\Kdx1-drose\d\bin\SourceBrowser_new\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <NuGetInput Include="$(MSBuildThisFile)" />
     <NuGetInput Include="$(NuSpecFile)" />

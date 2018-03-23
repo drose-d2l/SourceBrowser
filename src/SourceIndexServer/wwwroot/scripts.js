@@ -1,10 +1,11 @@
 ﻿var currentSelection = null;
 var currentResult = null;
-var useSolutionExplorer = /*USE_SOLUTION_EXPLORER*/true/*USE_SOLUTION_EXPLORER*/;
+var useSolutionExplorer = true;
 var anchorSplitChar = ",";
 
 var externalUrlMap = [
-    /*EXTERNAL_URL_MAP*/"https://referencesource.microsoft.com/", "http://source.roslyn.io/"/*EXTERNAL_URL_MAP*/
+    "http://referencesource.microsoft.com/",
+    "http://source.roslyn.io/"
 ];
 
 var supportedFileExtensions = [
@@ -331,7 +332,7 @@ function rewriteExternalLink(link) {
         link.target = "_top";
     }
 
-    if (link.hash && link.hash.length == 17) {
+    if (link.hash.length == 17) {
         link.onclick = function () {
             var filePath = top.s.location.pathname.slice(1);
             filePath = getDisplayableFileName(filePath);
@@ -680,7 +681,7 @@ function redirectToNextLevelRedirectFile() {
         var hashParts = anchor.split(anchorSplitChar);
         var id = hashParts[0];
 
-        var destination = "A" + id.slice(0, 1) + ".html" + "#" + createSafeLineNumber(id);
+        var destination = "a" + id.slice(0, 1) + ".html" + "#" + createSafeLineNumber(id);
         if (hashParts.length == 2) {
             destination = destination + anchorSplitChar + "references";
         }
@@ -737,7 +738,7 @@ function highlightOccurrence(lineNumber, symbolId) {
     sourceDocument.location.hash = lineNumberId;
 
     var lineNumberSpan = sourceDocument.getElementById(lineNumberId);
-    lineNumberSpan.style.background = "lime";
+    lineNumberSpan.style.background = "#AAA";
     sourceDocument.currentLine = lineNumberSpan;
 
     // there are two kinds of links in the document page:
@@ -749,7 +750,8 @@ function highlightOccurrence(lineNumber, symbolId) {
         var link = sourceDocument.links[i];
         var target = link.hash.substring(1);
         if (target == symbolId) {
-            link.style.background = "yellow";
+            link.style.background = "#0E4583";
+            link.style.color = "#DCDCDC";
         }
         else if (link !== lineNumberSpan) {
             link.style.background = "transparent";
@@ -783,7 +785,8 @@ function t(sender) {
 
     elements = document.getElementsByClassName(currentSelection);
     for (var i = 0; i < elements.length; i++) {
-        elements[i].style.background = "cyan";
+        elements[i].style.background = "#0E4583";
+        elements[i].style.color = "#DCDCDC";
     }
 
     var def = document.getElementById(currentSelection.replace(" r", " rd"));

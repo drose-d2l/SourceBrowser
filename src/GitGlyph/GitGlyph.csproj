@@ -4,8 +4,11 @@
     <OutputType>Library</OutputType>
     <TargetFramework>net46</TargetFramework>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>D:\D2L\Projects\Development\DevTools\MiscTools\bin\Debug\HtmlGenerator</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="LibGit2Sharp" Version="0.23.1" />
+    <PackageReference Include="LibGit2Sharp" Version="0.24.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MEF\MEF.csproj" />
